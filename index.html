@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="sorting visualizer, Sorting Visualizer, SortingVisualizer">
+        <meta name="author" content="Siva Kumar">
+        <meta name="description" content="A simple web application to visually see how sorting algorithms work">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styling/index.css">
+        <title>Sorting Visualizer</title>
+    </head>
+    <body>
+        <header>
+            <div id="title">Sorting Visualizer</div>
+        </header>
+        
+        <main>
+            <div id="input-btn">
+                <span><button type="button" id="generate-array-btn">Generate New Array</button></span>
+            
+                <span>
+                    <label for="array-size">Size</label>
+                    <input type="range" id="array-size" value="10" step="any" min="10" max="30">
+                </span>
+                
+                <span>
+                    <label for="sorting-speed">Speed</label>
+                    <input type="range" id="sorting-speed" value="1" step="any" min="1" max="5">
+                </span>
+                
+                <span id="sorting-type-btn">
+                    <button type="button" id="bubble-sort-btn" onclick="bubbleSort()">Bubble Sort</button>
+                    <button type="button" id="selection-sort-btn" onclick="selectionSort()">Selection Sort</button>
+                    <button type="button" id="insertion-sort-btn" onclick="insertionSort()">Insertion Sort</button>
+                </span>
+            </div>
+            
+            <div id="array-container"></div>
+        </main>
+
+        <footer id="time-space-complexity">
+            <span id="time-complexity">Time Complexity - </span>
+            <span id="space-complexity">Space Complexity - </span>
+        </footer>
+
+        <script src="scripts/index.js"></script>
+        <script src="scripts/Bubble Sort.js"></script>
+        <script src="scripts/Selection Sort.js"></script>
+        <script src="scripts/Insertion Sort.js"></script>
+    </body>
+</html>
